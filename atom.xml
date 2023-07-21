@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-21T16:13:05.238Z</updated>
+  <updated>2023-07-21T16:15:33.529Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,19 +21,10 @@
     <link href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2023-07-21T15:31:48.000Z</published>
-    <updated>2023-07-21T16:13:05.238Z</updated>
+    <updated>2023-07-21T16:15:33.529Z</updated>
     
     
-    <summary type="html">&lt;p&gt;最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。&lt;br&gt;执行以下命令修改本地git仓库邮箱地址，注意确保与远程仓库统一：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global user.email &lt;span class=&quot;string&quot;&gt;&amp;quot;your_right_email&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;配置完成后，查看修改情况：&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config user.email&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_1.png&quot; alt=&quot;blog1-1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;github所配置的邮箱地址：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_2.png&quot; alt=&quot;blog1-2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;确认一致后便可正常点亮小绿点了~&lt;/p&gt;
-&lt;p&gt;PS：正儿八经第一篇博客&lt;del&gt;记录了一件再小不过的事，写得不好请多多见谅，以后会常常更新的&lt;/del&gt;&lt;br&gt;特别鸣谢：感谢&lt;a href=&quot;https://hilinxinhui.github.io/&quot;&gt;这位同学&lt;/a&gt;的鼎力相助，我会继续加油~&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。 &lt;/p&gt;</summary>
     
     
     
@@ -43,19 +34,6 @@
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="github" scheme="http://example.com/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是一篇测试博客</title>
-    <link href="http://example.com/2023/07/09/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2023/07/09/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</id>
-    <published>2023-07-09T09:30:11.000Z</published>
-    <updated>2023-07-09T09:30:11.224Z</updated>
-    
-    
-    
-    
     
   </entry>
   
