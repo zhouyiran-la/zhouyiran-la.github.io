@@ -213,12 +213,27 @@
 
       
           <p>在以往学习中自己对于取模运算并未认真思考过（无非就是算余数），最近在学习Java运算符这一部分时，才发现自己对于求模操作一知半解，在此补充一下。</p>
-<h2 id="数学层面"><a href="#数学层面" class="headerlink" title="数学层面"></a>数学层面</h2><p>对于绝大多数计算系统来说，$ a $ 与 $ n $ 相除得到商 $ q $ 和余数 $ r $ ，满足如下数学关系：</p>
-<p>$$<br>\begin{equation}\tag {1} \label{eq1}<br>a&#x3D; nq+ r<br>\end{equation}<br>$$</p>
-<p>其中 $ q,r\in \mathbb{Z} $ ，$ \left | r \right | &lt; \left | n \right | $ 。由于 $ q &#x3D; a\mid n $ ，根据式 $ \eqref{eq1} $ 可以推出式 $ \eqref{eq2} $ ：</p>
-<p>$$<br>\begin{equation}\tag {2} \label{eq2}<br>r&#x3D; a-n\times \left ( a\mid n \right )<br>\end{equation}<br>$$</p>
-<h2 id="计算层面"><a href="#计算层面" class="headerlink" title="计算层面"></a>计算层面</h2><p>$ q &#x3D; a\mid n $ （a整除n）的计算结果与编程语言与底层硬件相关，为接近编程语言表示，$ a\mid n $ 后续由 $ a &#x2F; n $ 代替, 在此重点介绍三种计算方式。</p>
-<h3 id="向上取整（Ceiling）"><a href="#向上取整（Ceiling）" class="headerlink" title="向上取整（Ceiling）"></a>向上取整（Ceiling）</h3><p>计算结果为靠近$ +\infty $ 方向的最小整数，例如：</p>
+<h2 id="数学层面">数学层面</h2>
+<p>对于绝大多数计算系统来说，$ a $ 与 $ n $ 相除得到商 $ q $ 和余数 $ r
+$ ，满足如下数学关系：</p>
+<p><span class="math display">\[
+\begin{equation}\tag {1} \label{eq1}
+a= nq+ r
+\end{equation}  
+\]</span></p>
+<p>其中 $ q,r $ ，$ | r | &lt; | n | $ 。由于 $ q = an $ ，根据式 $
+<span class="math inline">\(\eqref{eq1}\)</span> $ 可以推出式 $ <span class="math inline">\(\eqref{eq2}\)</span> $ ：</p>
+<p><span class="math display">\[
+\begin{equation}\tag {2} \label{eq2}
+r= a-n\times \left ( a\mid n \right )
+\end{equation}  
+\]</span></p>
+<h2 id="计算层面">计算层面</h2>
+<p>$ q = an $
+（a整除n）的计算结果与编程语言与底层硬件相关，为接近编程语言表示，$ an $
+后续由 $ a / n $ 代替, 在此重点介绍三种计算方式。</p>
+<h3 id="向上取整ceiling">向上取整（Ceiling）</h3>
+<p>计算结果为靠近$ +$ 方向的最小整数，例如：</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/#more" rel="contents">
@@ -299,7 +314,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。 </p>
+          <p>最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
@@ -371,7 +386,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/07/09/hello-world/#more" rel="contents">
