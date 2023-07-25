@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。">
+  <meta name="description" content="正在准备中……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于github贡献无法同步的问题">
-<meta property="og:url" content="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Hexo-Next渲染Latex公式">
+<meta property="og:url" content="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93Latex%E5%85%AC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="zhouyiran-la">
-<meta property="og:description" content="最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。">
+<meta property="og:description" content="正在准备中……">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-21T15:31:48.000Z">
-<meta property="article:modified_time" content="2023-07-25T12:32:11.472Z">
+<meta property="article:published_time" content="2023-07-25T12:44:41.000Z">
+<meta property="article:modified_time" content="2023-07-25T12:47:34.991Z">
 <meta property="article:author" content="Yiran Zhou">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93Latex%E5%85%AC%E5%BC%8F/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>关于github贡献无法同步的问题 | zhouyiran-la</title>
+  <title>Hexo-Next渲染Latex公式 | zhouyiran-la</title>
   
 
 
@@ -174,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93Latex%E5%85%AC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关于github贡献无法同步的问题
+          Hexo-Next渲染Latex公式
         </h1>
 
         <div class="post-meta">
@@ -196,16 +195,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-07-21 23:31:48" itemprop="dateCreated datePublished" datetime="2023-07-21T23:31:48+08:00">2023-07-21</time>
+              <time title="创建时间：2023-07-25 20:44:41 / 修改时间：20:47:34" itemprop="dateCreated datePublished" datetime="2023-07-25T20:44:41+08:00">2023-07-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-25 20:32:11" itemprop="dateModified" datetime="2023-07-25T20:32:11+08:00">2023-07-25</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -227,21 +220,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。</p>
-<span id="more"></span>
-<p>执行以下命令修改本地git仓库邮箱地址，注意确保与远程仓库统一：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;your_right_email&quot;</span></span><br></pre></td></tr></table></figure>
-<p>配置完成后，查看修改情况：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-<p><img
-src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_1.png" /></p>
-<p>github所配置的邮箱地址：</p>
-<p><img
-src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_2.png" /></p>
-<p>确认一致后便可正常点亮小绿点了~</p>
-<p>PS：正儿八经第一篇博客~记录了一件再小不过的事，写得不好请多多见谅，以后会常常更新的！<br />
-特别鸣谢：感谢<a
-target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同学</a>的鼎力相助，我会继续加油~</p>
+        <p>正在准备中……</p>
 
     </div>
 
@@ -252,7 +231,6 @@ target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同�
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/github/" rel="tag"># github</a>
           </div>
 
         
@@ -261,13 +239,10 @@ target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/07/09/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/" rel="prev" title="关于取模运算的一些新理解">
+      <i class="fa fa-chevron-left"></i> 关于取模运算的一些新理解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/" rel="next" title="关于取模运算的一些新理解">
-      关于取模运算的一些新理解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
