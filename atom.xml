@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-25T09:30:23.936Z</updated>
+  <updated>2023-07-25T12:11:58.969Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,31 +21,35 @@
     <link href="http://example.com/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/"/>
     <id>http://example.com/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/</id>
     <published>2023-07-23T15:55:51.000Z</published>
-    <updated>2023-07-25T09:30:23.936Z</updated>
+    <updated>2023-07-25T12:11:58.969Z</updated>
     
     
     <summary type="html">&lt;p&gt;在以往学习中自己对于取模运算并未认真思考过（无非就是算余数），最近在学习Java运算符这一部分时，才发现自己对于求模操作一知半解，在此补充一下。&lt;/p&gt;
 &lt;h2 id=&quot;数学层面&quot;&gt;数学层面&lt;/h2&gt;
-&lt;p&gt;对于绝大多数计算系统来说，$ a $ 与 $ n $ 相除得到商 $ q $ 和余数 $ r
-$ ，满足如下数学关系：&lt;/p&gt;
+&lt;p&gt;对于绝大多数计算系统来说，&lt;span class=&quot;math inline&quot;&gt;&#92;(a&#92;)&lt;/span&gt; 与
+&lt;span class=&quot;math inline&quot;&gt;&#92;(n&#92;)&lt;/span&gt; 相除得到商 &lt;span class=&quot;math inline&quot;&gt;&#92;(q&#92;)&lt;/span&gt; 和余数 &lt;span class=&quot;math inline&quot;&gt;&#92;(r&#92;)&lt;/span&gt; ，满足如下数学关系：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
 &#92;begin{equation}&#92;tag {1} &#92;label{eq1}
 a= nq+ r
 &#92;end{equation}  
 &#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 $ q,r $ ，$ | r | &amp;lt; | n | $ 。由于 $ q = an $ ，根据式 $
-&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;eqref{eq1}&#92;)&lt;/span&gt; $ 可以推出式 $ &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;eqref{eq2}&#92;)&lt;/span&gt; $ ：&lt;/p&gt;
+&lt;p&gt;其中 &lt;span class=&quot;math inline&quot;&gt;&#92;(q,r&#92;in &#92;mathbb{Z}&#92;)&lt;/span&gt; ， &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;left | r &#92;right | &amp;lt; &#92;left | n &#92;right
+|&#92;)&lt;/span&gt; 。由于 &lt;span class=&quot;math inline&quot;&gt;&#92;(q = a&#92;mid n&#92;)&lt;/span&gt;
+，根据式 &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;eqref{eq1}&#92;)&lt;/span&gt; 可以推出式
+&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;eqref{eq2}&#92;)&lt;/span&gt; ：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
 &#92;begin{equation}&#92;tag {2} &#92;label{eq2}
 r= a-n&#92;times &#92;left ( a&#92;mid n &#92;right )
-&#92;end{equation}  
+&#92;end{equation}
 &#92;]&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;计算层面&quot;&gt;计算层面&lt;/h2&gt;
-&lt;p&gt;$ q = an $
-（a整除n）的计算结果与编程语言与底层硬件相关，为接近编程语言表示，$ an $
-后续由 $ a / n $ 代替, 在此重点介绍三种计算方式。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(q = a&#92;mid
+n&#92;)&lt;/span&gt;（a整除n）的计算结果与编程语言与底层硬件相关，为接近编程语言表示，
+&lt;span class=&quot;math inline&quot;&gt;&#92;(a&#92;mid n&#92;)&lt;/span&gt; 后续由 &lt;span class=&quot;math inline&quot;&gt;&#92;(a / n&#92;)&lt;/span&gt; 代替,
+在此重点介绍三种计算方式。&lt;/p&gt;
 &lt;h3 id=&quot;向上取整ceiling&quot;&gt;向上取整（Ceiling）&lt;/h3&gt;
-&lt;p&gt;计算结果为靠近$ +$ 方向的最小整数，例如：&lt;/p&gt;</summary>
+&lt;p&gt;计算结果为靠近 &lt;span class=&quot;math inline&quot;&gt;&#92;(+&#92;infty&#92;)&lt;/span&gt;
+方向的最小整数，例如：&lt;/p&gt;</summary>
     
     
     
