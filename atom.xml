@@ -40,7 +40,7 @@
     <link href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2023-07-21T15:31:48.000Z</published>
-    <updated>2023-07-25T12:23:23.096Z</updated>
+    <updated>2023-07-25T12:32:11.472Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。&lt;/p&gt;</summary>
