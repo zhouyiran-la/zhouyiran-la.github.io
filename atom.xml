@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-21T16:15:33.529Z</updated>
+  <updated>2023-07-25T09:30:23.936Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于取模运算的一些新理解</title>
+    <link href="http://example.com/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/"/>
+    <id>http://example.com/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/</id>
+    <published>2023-07-23T15:55:51.000Z</published>
+    <updated>2023-07-25T09:30:23.936Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在以往学习中自己对于取模运算并未认真思考过（无非就是算余数），最近在学习Java运算符这一部分时，才发现自己对于求模操作一知半解，在此补充一下。&lt;/p&gt;
+&lt;h2 id=&quot;数学层面&quot;&gt;&lt;a href=&quot;#数学层面&quot; class=&quot;headerlink&quot; title=&quot;数学层面&quot;&gt;&lt;/a&gt;数学层面&lt;/h2&gt;&lt;p&gt;对于绝大多数计算系统来说，$ a $ 与 $ n $ 相除得到商 $ q $ 和余数 $ r $ ，满足如下数学关系：&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;&#92;begin{equation}&#92;tag {1} &#92;label{eq1}&lt;br&gt;a&amp;#x3D; nq+ r&lt;br&gt;&#92;end{equation}&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;其中 $ q,r&#92;in &#92;mathbb{Z} $ ，$ &#92;left | r &#92;right | &amp;lt; &#92;left | n &#92;right | $ 。由于 $ q &amp;#x3D; a&#92;mid n $ ，根据式 $ &#92;eqref{eq1} $ 可以推出式 $ &#92;eqref{eq2} $ ：&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;&#92;begin{equation}&#92;tag {2} &#92;label{eq2}&lt;br&gt;r&amp;#x3D; a-n&#92;times &#92;left ( a&#92;mid n &#92;right )&lt;br&gt;&#92;end{equation}&lt;br&gt;$$&lt;/p&gt;
+&lt;h2 id=&quot;计算层面&quot;&gt;&lt;a href=&quot;#计算层面&quot; class=&quot;headerlink&quot; title=&quot;计算层面&quot;&gt;&lt;/a&gt;计算层面&lt;/h2&gt;&lt;p&gt;$ q &amp;#x3D; a&#92;mid n $ （a整除n）的计算结果与编程语言与底层硬件相关，为接近编程语言表示，$ a&#92;mid n $ 后续由 $ a &amp;#x2F; n $ 代替, 在此重点介绍三种计算方式。&lt;/p&gt;
+&lt;h3 id=&quot;向上取整（Ceiling）&quot;&gt;&lt;a href=&quot;#向上取整（Ceiling）&quot; class=&quot;headerlink&quot; title=&quot;向上取整（Ceiling）&quot;&gt;&lt;/a&gt;向上取整（Ceiling）&lt;/h3&gt;&lt;p&gt;计算结果为靠近$ +&#92;infty $ 方向的最小整数，例如：&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>关于github贡献无法同步的问题</title>
