@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。">
+  <meta name="description" content="在编写博客时常有插入数学公式的需要，本文介绍如何在Hexo-Next环境下构建blog时实现LaTex数学公式渲染。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于github贡献无法同步的问题">
-<meta property="og:url" content="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Hexo-Next渲染LaTex公式">
+<meta property="og:url" content="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93LaTex%E5%85%AC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="zhouyiran-la">
-<meta property="og:description" content="最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。">
+<meta property="og:description" content="在编写博客时常有插入数学公式的需要，本文介绍如何在Hexo-Next环境下构建blog时实现LaTex数学公式渲染。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-21T15:31:48.000Z">
-<meta property="article:modified_time" content="2023-07-25T12:32:11.472Z">
+<meta property="article:published_time" content="2023-07-25T12:44:41.000Z">
+<meta property="article:modified_time" content="2023-08-08T14:33:38.129Z">
 <meta property="article:author" content="Yiran Zhou">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93LaTex%E5%85%AC%E5%BC%8F/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>关于github贡献无法同步的问题 | zhouyiran-la</title>
+  <title>Hexo-Next渲染LaTex公式 | zhouyiran-la</title>
   
 
 
@@ -174,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/21/%E5%85%B3%E4%BA%8Egithub%E8%B4%A1%E7%8C%AE%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93LaTex%E5%85%AC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关于github贡献无法同步的问题
+          Hexo-Next渲染LaTex公式
         </h1>
 
         <div class="post-meta">
@@ -197,14 +196,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-07-21 23:31:48" itemprop="dateCreated datePublished" datetime="2023-07-21T23:31:48+08:00">2023-07-21</time>
+              <time title="创建时间：2023-07-25 20:44:41" itemprop="dateCreated datePublished" datetime="2023-07-25T20:44:41+08:00">2023-07-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-25 20:32:11" itemprop="dateModified" datetime="2023-07-25T20:32:11+08:00">2023-07-25</time>
+                <time title="修改时间：2023-08-08 22:33:38" itemprop="dateModified" datetime="2023-08-08T22:33:38+08:00">2023-08-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,21 +226,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最近在学习过程中发现，在本地commit代码或者利用hexo部署博客后，远端github无法同步贡献，经过搜索发现是由于本地git仓库与远程github仓库所保存的user.email信息不一致造成的。故简单记录。</p>
+        <p>在编写博客时常有插入数学公式的需要，本文介绍如何在Hexo-Next环境下构建blog时实现LaTex数学公式渲染。</p>
 <span id="more"></span>
-<p>执行以下命令修改本地git仓库邮箱地址，注意确保与远程仓库统一：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;your_right_email&quot;</span></span><br></pre></td></tr></table></figure>
-<p>配置完成后，查看修改情况：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<h2 id="本地markdown数学公式渲染">本地Markdown数学公式渲染</h2>
+<p>在编写blog时常常需要本地预览Markdown文档，但VScode自带的KaTeX渲染工具功能有限，在对公式进行交叉引用时常常会出现如下错误:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KaTeX parse error: Expected &#x27;EOF&#x27;, got &#x27;\label&#x27; at position XX</span><br></pre></td></tr></table></figure>
+<p>Mathjax是一款功能功能更为强大的渲染引擎，支持更多复杂表示，在VScode中可以通过安装Markdown
+Preview
+Enhanced（MPE）扩展使用Mathjax，安装完成后在已安装扩展列表中找到MPE，右下方选择设置-&gt;Extension
+Settings，在上方搜索栏中搜索<code>Markdown-preview-enhanced: Math Rendering Option</code>，将该选项修改为<code>Mathjax</code>。具体操作如下：</p>
 <p><img
-src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_1.png" /></p>
-<p>github所配置的邮箱地址：</p>
+src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog3_1.png" /></p>
+<p>以上操作完成后当再次预览Markdown文档时会自动载入MPE预览窗口，注意此时右击文档时Open
+Preview功能会消失，用<code>ctrl + shift + v</code>比较方便。</p>
+<p>有一说一，MPE的默认预览界面有点子丑~如果介意的话可以自定义CSS修改样式：<code>ctrl + shift + p</code>打开控制面板运行<code>Markdown Preview Enhanced: Customize Css</code>，会自动打开<code>style.less</code>文件，更多细节在此不过多赘述，有兴趣可以参考<a
+target="_blank" rel="noopener" href="https://www.bookstack.cn/read/mpe/zh-cn-customize-css.md">这里</a>。以下是我的style.less内容：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Please visit the URL below for more information: */</span></span><br><span class="line"><span class="comment">/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.markdown-preview</span><span class="selector-class">.markdown-preview</span> &#123;</span><br><span class="line">  // modify your style here</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#222</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: small;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>预览效果如下：</p>
 <p><img
-src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog1_2.png" /></p>
-<p>确认一致后便可正常点亮小绿点了~</p>
-<p>PS：正儿八经第一篇博客~记录了一件再小不过的事，写得不好请多多见谅，以后会常常更新的！<br />
-特别鸣谢：感谢<a
-target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同学</a>的鼎力相助，我会继续加油~</p>
+src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog3_2.png" /></p>
+<h2 id="hexo-next数学公式渲染">Hexo-Next数学公式渲染</h2>
+<ol type="1">
+<li><p>确保安装<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html">pandoc</a>。
+<img
+src="https://raw.githubusercontent.com/zhouyiran-la/picture_box/main/blog/blog3_3.png" /></p></li>
+<li><p>卸载<code>hexo-math</code>，替换渲染工具:<code>hexo-renderer-marked</code>-&gt;<code>hexo-renderer-pandoc</code></p></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm un hexo-math</span><br><span class="line">$ npm un hexo-renderer-marked</span><br><span class="line">$ npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>修改next/_config.yml，per_page建议设置为false，在有公式渲染需求的blog的<code>Front-matter</code>部分添加<code>mathjax: true</code>，否则会影响速度。</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>部署相关博客</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
+<p>经过以上操作，可以在blog中实现LaTex数学公式渲染及交叉引用功能。</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/math-equations.html#mjx-eqn%3Aeq1"
+class="uri">https://theme-next.js.org/docs/third-party-services/math-equations.html#mjx-eqn%3Aeq1</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/381508379"
+class="uri">https://zhuanlan.zhihu.com/p/381508379</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/mifangdebaise/article/details/100847378"
+class="uri">https://blog.csdn.net/mifangdebaise/article/details/100847378</a></li>
+</ul>
 
     </div>
 
@@ -252,7 +283,6 @@ target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同�
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/github/" rel="tag"># github</a>
           </div>
 
         
@@ -261,13 +291,10 @@ target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/07/09/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/" rel="prev" title="关于取模运算的一些新理解">
+      <i class="fa fa-chevron-left"></i> 关于取模运算的一些新理解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/07/23/%E5%85%B3%E4%BA%8E%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E7%90%86%E8%A7%A3/" rel="next" title="关于取模运算的一些新理解">
-      关于取模运算的一些新理解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -326,6 +353,7 @@ target="_blank" rel="noopener" href="https://hilinxinhui.github.io/">这位同�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0markdown%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93"><span class="nav-number">1.</span> <span class="nav-text">本地Markdown数学公式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-next%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93"><span class="nav-number">2.</span> <span class="nav-text">Hexo-Next数学公式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
