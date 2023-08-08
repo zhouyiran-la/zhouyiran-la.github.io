@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-08T14:20:04.901Z</updated>
+  <updated>2023-08-08T14:24:36.597Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93LaTex%E5%85%AC%E5%BC%8F/"/>
     <id>http://example.com/2023/07/25/Hexo-Next%E6%B8%B2%E6%9F%93LaTex%E5%85%AC%E5%BC%8F/</id>
     <published>2023-07-25T12:44:41.000Z</published>
-    <updated>2023-08-08T14:20:04.901Z</updated>
+    <updated>2023-08-08T14:24:36.597Z</updated>
     
     
     <summary type="html">&lt;p&gt;在编写博客时常有插入数学公式的需要，本文介绍如何在Hexo-Next环境下构建blog时实现LaTex数学公式渲染。&lt;/p&gt;</summary>
